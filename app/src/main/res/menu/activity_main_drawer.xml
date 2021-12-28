@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_my_accounts_black"
+            android:title="My Account" />
+        <item
+            android:id="@+id/nav_bookmark"
+            android:icon="@drawable/ic_bookmark_2"
+            android:title="My Bookmarks" />
+        <item
+            android:id="@+id/nav_download"
+            android:icon="@drawable/ic_my_downloads_black"
+            android:title="My Downloads" />
+
+        <item
+            android:id="@+id/nav_remove"
+            android:icon="@drawable/ic_delete"
+            android:title="Remove My Account" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+    </group>
+</menu>

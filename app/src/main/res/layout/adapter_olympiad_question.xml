@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txt_question_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Question 1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bookmark_1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_question_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/margin_20"
+        app:layout_constraintTop_toBottomOf="@+id/cl_header"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/txt_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_black"
+            android:text="lorems " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@+id/cl_question_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/opt_one"
+            android:padding="@dimen/margin_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_a"
+                android:background="@drawable/back_circle_option"
+                android:text="A"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/ans_one"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/id_a"
+                app:layout_constraintTop_toTopOf="@+id/id_a"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="@dimen/margin_20"
+                app:layout_constraintBottom_toBottomOf="@id/id_a"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/opt_two"
+            app:layout_constraintTop_toBottomOf="@+id/opt_one"
+            android:padding="@dimen/margin_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_b"
+                android:background="@drawable/back_circle_option"
+                android:text="B"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/ans_two"
+                app:layout_constraintStart_toEndOf="@+id/id_b"
+                app:layout_constraintTop_toTopOf="@+id/id_b"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_20"
+                app:layout_constraintBottom_toBottomOf="@id/id_b"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/opt_three"
+            app:layout_constraintTop_toBottomOf="@+id/opt_two"
+            android:padding="@dimen/margin_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_c"
+                android:background="@drawable/back_circle_option"
+                android:text="C"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/ans_three"
+                app:layout_constraintStart_toEndOf="@+id/id_c"
+                app:layout_constraintTop_toTopOf="@+id/id_c"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/margin_20"
+                app:layout_constraintBottom_toBottomOf="@id/id_c"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/opt_four"
+            app:layout_constraintTop_toBottomOf="@+id/opt_three"
+            android:padding="@dimen/margin_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_d"
+                android:background="@drawable/back_circle_option"
+                android:text="D"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/ans_four"
+                app:layout_constraintStart_toEndOf="@+id/id_d"
+                app:layout_constraintTop_toTopOf="@+id/id_d"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/id_d"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

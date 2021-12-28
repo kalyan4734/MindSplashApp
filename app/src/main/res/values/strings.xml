@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Mind Splash</string>
+    <string name="login">Enter mobile number to continue</string>
+    <string name="otpwait">Please wait while we verify your mobile no.\nYou can also enter OTP manually below</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sm">If you want to learn any specific subject select from below</string>
+    <string name="askmsg">Upload upto 2 questions per week for free and get answers from expert teachers</string>
+
+    <string name="check_inter_connection">Please check your internet connection</string>
+    <string name="mobile_number_verified">Mobile number verified successfully</string>
+    <string name="enter_mobile_number">Please enter mobile number</string>
+    <string name="enter_valid_mobile_number">Enter valid mobile number</string>
+    <string name="enter_first_name">Enter your first name</string>
+    <string name="enter_last_name">Enter your last name</string>
+    <string name="enter_valid_email">Enter valid email id</string>
+    <string name="select_class">Select Class</string>
+    <string name="parent_email_sent">We have sent a verification email to your parent</string>
+    <string name="kindly_open_email">Kindly open email and click \'Confirm\' button</string>
+    <string name="please_select_class">Please select your class</string>
+    <string name="concepts">CONCEPTS</string>
+    <string name="practice">PRACTICE</string>
+    <string name="school">SCHOOL:</string>
+    <string name="practice_mcq">Practice MCQs of your board level</string>
+    <string name="chooes_olympiad">Choose Olympiad</string>
+    <string name="exam_name">Exam name</string>
+    <string name="year">Year</string>
+    <string name="somthing_wrong">Somthing went wrong!</string>
+    <string name="proceed">Proceed</string>
+    <string name="my_account">My Account</string>
+    <string name="profile_details">PROFILE DETAILS</string>
+    <string name="ask_credits">ASK CREDITS</string>
+    <string name="you_have_x_credits">You have x credits</string>
+    <string name="pay_history">payment history</string>
+    <string name="term_condition">Terms and conditions**</string>
+    <string name="next">Next</string>
+    <string name="my_bookmark">My Bookmarks</string>
+
+    <string name="your_question_will_be_answered_by_out_expert_teacherwithin_24_hours">Your question will be answered by out expert teacherwithin 24 hours</string>
+    <string name="Error_in_payment">Error in payment</string>
+    <string name="submit">Submit</string>
+
+
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:id="@+id/ll_chapters"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/border_rounded_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/txt_no_of_chapters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:minWidth="50dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:text="1"
+        android:background="@drawable/border_rounded_grey"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txt_chapter_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/textBlack"
+        android:textSize="14sp"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:text="Chapter Name"
+        android:gravity="start"/>
+
+    <ImageView
+        android:id="@+id/bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_bookmark_1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ProgressBar
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:id="@+id/progress_horizontal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:progress="90"
+            android:layout_marginStart="-10dp"
+            android:progressDrawable="@drawable/progress"
+            android:padding="16dp" />
+        <TextView
+            android:id="@+id/txt_percentage"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/textBlack"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="90%"
+            android:gravity="start"/>
+    </LinearLayout>
+
+
+</LinearLayout>

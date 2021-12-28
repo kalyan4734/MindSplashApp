@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    android:id="@+id/ll_view"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/txt_no_of_chapters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:minWidth="50dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:text="1"
+        android:visibility="visible"
+        android:background="@drawable/border_rounded_grey"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/textBlack"
+        android:textSize="14sp"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:text="Chapter Name"
+        android:gravity="start"/>
+
+
+
+</LinearLayout>

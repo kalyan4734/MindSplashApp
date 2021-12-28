@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="10dp"
+>
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/user"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/darkgrey"/>
+<!--<View-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="4dp"-->
+<!--    android:background="@color/colorPrimaryDark"-->
+<!--    />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:paddingTop="16dp"-->
+        <!--android:src="@drawable/icon" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/userNText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/textBlack"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:text=""
+       />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textBlack"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:text=""
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar"
+        />
+
+    <TextView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type your questions on upload image"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:id="@+id/hT"
+        />
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonI"
+        android:layout_below="@+id/hT"/>
+    <TextView
+        android:visibility="gone"
+        android:layout_below="@+id/hT"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Camera"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/grey"
+        android:layout_above="@+id/buttonI"
+        />
+
+    <LinearLayout
+        android:layout_above="@+id/buttonTe"
+        android:id="@+id/buttonI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_gallery"
+            android:layout_weight="1"
+            android:id="@+id/galleryView"
+            app:civ_circle_background_color="@color/darkgrey"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_menu_camera"
+            android:id="@+id/captureBtn"
+            app:civ_circle_background_color="@color/darkgrey"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_type"
+            android:id="@+id/typeBtn"
+            app:civ_circle_background_color="@color/darkgrey"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonTe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/textBlack"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/menu_gallery"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/textBlack"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="Camera"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/textBlack"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="Type"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

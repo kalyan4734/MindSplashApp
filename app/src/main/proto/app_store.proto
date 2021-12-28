@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package = "com.mindsplash";
+option java_multiple_files = true;
+
+message StudentProto {
+         string id = 1;
+         string mobileno = 2;
+         string firstname = 3;
+         string lastname = 4;
+         string classx = 5;
+         string parentemail = 6;
+         string address = 7;
+         string otp = 8;
+         bool isverified = 9;
+         string timestamp = 10;
+}
