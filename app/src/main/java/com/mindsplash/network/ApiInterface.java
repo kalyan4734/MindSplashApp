@@ -108,6 +108,14 @@ public interface ApiInterface {
             @Part("student_que") String text,
             @Part MultipartBody.Part image);
 
+  @FormUrlEncoded
+    @POST("student_question_api/add_student_question/")
+    Call<ResponseBody> postaskQues64(
+            @Field("student_id" ) String userid,
+            @Field("student_que") String text,
+            @Field(value = "que_image",encoded = false) String img
+      );
+
 
     @FormUrlEncoded
     @POST("student_api/search/")

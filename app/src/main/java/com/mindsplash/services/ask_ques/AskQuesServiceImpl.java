@@ -1,5 +1,8 @@
 package com.mindsplash.services.ask_ques;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -9,6 +12,7 @@ import com.mindsplash.network.ApiClient;
 import com.mindsplash.network.ApiInterface;
 import com.mindsplash.network.model.CommonResponse;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -41,10 +45,14 @@ public class AskQuesServiceImpl implements AskQuesService {
 
         MultipartBody.Part image;
         MultipartBody.Part filePart;
+        String image64 = "";
         if (imagefiele != null) {
 
-
-                     filePart =generateFileBody(imagefiele.getAbsolutePath());
+            Bitmap bm = BitmapFactory.decodeFile(imagefiele.getAbsolutePath());
+            ByteArrayOutputStream bOut = new ByteArrayOutputStream();
+            bm.compress(Bitmap.CompressFormat.JPEG, 100, bOut);
+            image64 ="data:image/jpeg;base64,"+ Base64.encodeToString(bOut.toByteArray(), Base64.DEFAULT);
+//                     filePart =generateFileBody(imagefiele.getAbsolutePath());
 //                             MultipartBody.Part.createFormData("que_image", imagefiele.getName(), RequestBody.create(MediaType.parse("image/*"), imagefiele));
 
             image=  new FileHelper().createPart(
@@ -56,10 +64,10 @@ public class AskQuesServiceImpl implements AskQuesService {
             filePart = null;
         }
 
-        Log.e("userid",new Gson().toJson(image));
-        Log.e("userid",new Gson().toJson(filePart));
-        Call<ResponseBody> call = apiInterface.postaskQues(
-                "42",text, filePart);
+        Log.e("userid",image64);
+//        Log.e("userid",new Gson().toJson(filePart));
+        Call<ResponseBody> call = apiInterface.postaskQues64(
+                "42",text, image64);
         call.enqueue(new Callback<ResponseBody>() {
 
             @Override
