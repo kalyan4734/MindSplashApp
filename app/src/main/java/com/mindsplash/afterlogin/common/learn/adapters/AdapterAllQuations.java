@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.judemanutd.katexview.KatexView;
 import com.mindsplash.R;
 import com.mindsplash.afterlogin.common.learn.quationsinterfaces.QuationAnswserSelection;
 import com.mindsplash.afterlogin.common.learn.quationsinterfaces.SubmitAnswer;
@@ -43,12 +44,23 @@ public class AdapterAllQuations extends RecyclerView.Adapter<AdapterAllQuations.
     @Override
     public void onBindViewHolder(@NonNull AllQuationViewHolder holder, int position) {
         holder.txtQuestion.setText(quesArrayList.get(position).getQuestion());
+        holder.txtQuestion.setVisibility(View.GONE);
+        holder.txtQuestionltx.setText(quesArrayList.get(position).getQuestion().replace("[/latex]", "").replace("[latex]",""));
         holder.txtQuestionNo.setText("Question " + position);
 
         holder.txtAns1.setText(quesArrayList.get(position).getOption_a());
         holder.txtAns2.setText(quesArrayList.get(position).getOption_b());
         holder.txtAns3.setText(quesArrayList.get(position).getOption_c());
         holder.txtAns4.setText(quesArrayList.get(position).getOption_d());
+        holder.txtAns1.setVisibility(View.GONE);
+        holder.txtAns2.setVisibility(View.GONE);
+        holder.txtAns3.setVisibility(View.GONE);
+        holder.txtAns4.setVisibility(View.GONE);
+
+      holder.txtAns1ltx.setText(quesArrayList.get(position).getOption_a().replace("[/latex]", "").replace("[latex]",""));
+        holder.txtAns2ltx.setText(quesArrayList.get(position).getOption_b().replace("[/latex]", "").replace("[latex]",""));
+        holder.txtAns3ltx.setText(quesArrayList.get(position).getOption_c().replace("[/latex]", "").replace("[latex]",""));
+        holder.txtAns4ltx.setText(quesArrayList.get(position).getOption_d().replace("[/latex]", "").replace("[latex]",""));
 
         if (quationId != null && quationId.trim().equalsIgnoreCase(quesArrayList.get(position).getId())) {
             String correctChoice = quesArrayList.get(position).getCorrect_answer();
@@ -139,11 +151,18 @@ public class AdapterAllQuations extends RecyclerView.Adapter<AdapterAllQuations.
 
     public class AllQuationViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final TextView txtQuestion;
+        private final KatexView txtQuestionltx;
         private final TextView txtQuestionNo;
         private final TextView txtAns1;
         private final TextView txtAns2;
         private final TextView txtAns3;
         private final TextView txtAns4;
+
+       private final KatexView txtAns1ltx;
+        private final KatexView txtAns2ltx;
+        private final KatexView txtAns3ltx;
+        private final KatexView txtAns4ltx;
+
         private final TextView txtA;
         private final TextView txtB;
         private final TextView txtC;
@@ -156,12 +175,18 @@ public class AdapterAllQuations extends RecyclerView.Adapter<AdapterAllQuations.
         public AllQuationViewHolder(@NonNull View itemView) {
             super(itemView);
             txtQuestion = itemView.findViewById(R.id.txt_question);
+            txtQuestionltx = itemView.findViewById(R.id.txt_question_ltx);
             txtQuestionNo = itemView.findViewById(R.id.txt_question_no);
 
             txtAns1 = itemView.findViewById(R.id.ans_one);
             txtAns2 = itemView.findViewById(R.id.ans_two);
             txtAns3 = itemView.findViewById(R.id.ans_three);
             txtAns4 = itemView.findViewById(R.id.ans_four);
+
+            txtAns1ltx = itemView.findViewById(R.id.ans_one_ltx);
+            txtAns2ltx = itemView.findViewById(R.id.ans_two_ltx);
+            txtAns3ltx = itemView.findViewById(R.id.ans_three_ltx);
+            txtAns4ltx = itemView.findViewById(R.id.ans_four_ltx);
 
             txtA = itemView.findViewById(R.id.id_a);
             txtB = itemView.findViewById(R.id.id_b);
